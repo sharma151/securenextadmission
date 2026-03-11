@@ -4,12 +4,10 @@ import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { Header } from "@/components/navigation/Header";
 import { WhatsAppFab } from "@/components/ui/WhatsAppFab";
 import { navLinks } from "@/config/navigation";
-import { Inter, Poppins } from "next/font/google";
+import { Inter, Poppins, Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
 
-const fontSans = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans"
-});
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const fontDisplay = Poppins({
   subsets: ["latin"],
@@ -32,10 +30,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={cn("font-sans", geist.variable)}>
       <body
         suppressHydrationWarning
-        className={`${fontSans.variable} ${fontDisplay.variable} min-h-screen bg-background text-foreground antialiased`}
+        className={`${geist.variable} ${fontDisplay.variable} min-h-screen bg-background text-foreground antialiased`}
       >
         <ThemeProvider>
           <div className="flex min-h-screen flex-col">

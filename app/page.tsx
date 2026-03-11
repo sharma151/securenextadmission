@@ -1,10 +1,11 @@
 import { QuickInquiryDialog } from "@/components/forms/QuickInquiryDialog";
 import { InquiryForm } from "@/components/forms/InquiryForm";
 import type { Metadata } from "next";
+import { MainCarousel } from "@/components/carousel";
 
 export function generateMetadata(): Metadata {
   return {
-    title: "Home"
+    title: "Home",
   };
 }
 
@@ -12,15 +13,13 @@ export default function HomePage() {
   return (
     <>
       {/* <QuickInquiryDialog /> */}
+      <MainCarousel />
       <section className="bg-linear-to-b from-primary/5 via-background to-background">
         <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-16 lg:flex-row lg:items-center lg:py-24">
           <div className="flex-1 space-y-6">
             <h1 className="text-balance text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-              Secure Your{" "}
-              <span className="">
-                Dream Admission
-              </span>{" "}
-              with Expert Guidance.
+              Secure Your <span className="">Dream Admission</span> with Expert
+              Guidance.
             </h1>
             <p className="max-w-xl text-lg text-muted-foreground">
               Personalized counselling for Engineering, Medical, and Management
@@ -77,4 +76,3 @@ export default function HomePage() {
     </>
   );
 }
-
