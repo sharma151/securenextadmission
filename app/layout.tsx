@@ -41,7 +41,7 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
             <footer className="border-t bg-muted/40">
               <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-8 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
-                <p>&copy; {new Date().getFullYear()} Secure Next Admission.</p>
+                <p className="pl-7">&copy; {new Date().getFullYear()} Secure Next Admission.</p>
                 <nav aria-label="Footer navigation" className="flex flex-wrap gap-4">
                   {navLinks.map((item) => (
                     <a key={item.href} href={item.href} className="hover:text-foreground">

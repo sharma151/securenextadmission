@@ -29,7 +29,7 @@ export default function HomePage() {
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href="/admission"
-                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-primary to-emerald-500 px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition hover:opacity-95"
+                className="inline-flex items-center justify-center rounded-full bg-linear-to-r from-primary to-emerald-500 px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition hover:opacity-95"
               >
                 Explore Admissions
               </a>
