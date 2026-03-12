@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <>
       {/* <QuickInquiryDialog /> */}
-      <MainCarousel />
+      {/* <MainCarousel /> */}
       <section className="bg-linear-to-b from-primary/5 via-background to-background">
         <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-16 lg:flex-row lg:items-center lg:py-24">
           <div className="flex-1 space-y-6">

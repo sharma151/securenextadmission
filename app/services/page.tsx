@@ -1,119 +1,9 @@
-// import type { Metadata } from "next";
-// import { GraduationCap, FileText, Compass, PhoneCall } from "lucide-react";
-
-// export function generateMetadata(): Metadata {
-//   return {
-//     title: "Services"
-//   };
-// }
-
-// const services = [
-//   {
-//     title: "Career & Course Counselling",
-//     description:
-//       "Understand your strengths and pick the right branch and pathway with expert guidance.",
-//     icon: Compass
-//   },
-//   {
-//     title: "College Shortlisting",
-//     description:
-//       "Smart shortlisting based on rank, budget, location, and placement preferences.",
-//     icon: GraduationCap
-//   },
-//   {
-//     title: "Documents & Application Support",
-//     description:
-//       "Form filling, document checklist, deadline tracking, and accurate submissions.",
-//     icon: FileText
-//   },
-//   {
-//     title: "Admission Helpline",
-//     description:
-//       "Fast assistance for counselling rounds, seat allocation, and reporting steps.",
-//     icon: PhoneCall
-//   }
-// ];
-
-// export default function ServicesPage() {
-//   return (
-//     <section className="bg-background">
-//       <div className="mx-auto max-w-6xl px-4 py-12">
-//         <header className="mb-10 space-y-4">
-//           <p className="inline-flex w-fit rounded-full border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
-//             What we do best
-//           </p>
-//           <h1 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl">
-//             Services built for clarity, speed, and outcomes.
-//           </h1>
-//           <p className="max-w-2xl text-muted-foreground">
-//             Whether you’re targeting top colleges or the best option for your
-//             budget, our process keeps you informed at every step.
-//           </p>
-//         </header>
-
-//         <div className="grid gap-6 md:grid-cols-2">
-//           {services.map((service) => {
-//             const Icon = service.icon;
-//             return (
-//               <article
-//                 key={service.title}
-//                 className="gradient-card rounded-2xl border bg-card p-6 shadow-sm transition hover:shadow-lg"
-//               >
-//                 <div className="flex items-start gap-4">
-//                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary/20 to-emerald-500/20">
-//                     <Icon className="h-6 w-6 text-primary" />
-//                   </div>
-//                   <div>
-//                     <h2 className="text-lg font-semibold">{service.title}</h2>
-//                     <p className="mt-2 text-sm text-muted-foreground">
-//                       {service.description}
-//                     </p>
-//                   </div>
-//                 </div>
-//               </article>
-//             );
-//           })}
-//         </div>
-
-//         <div className="mt-12 rounded-2xl border bg-card p-8">
-//           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-//             <div>
-//               <h2 className="text-2xl font-semibold">
-//                 Want a tailored shortlist?
-//               </h2>
-//               <p className="mt-2 text-sm text-muted-foreground">
-//                 Share your rank, budget, and preferences — we’ll guide you with
-//                 the most practical options.
-//               </p>
-//             </div>
-//             <div className="flex flex-col gap-3 sm:flex-row">
-//               <a
-//                 href="/admission"
-//                 className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-primary to-emerald-500 px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition hover:opacity-95"
-//               >
-//                 Explore Admissions
-//               </a>
-//               <a
-//                 href="/contact"
-//                 className="inline-flex items-center justify-center rounded-full border bg-card px-6 py-3 text-sm font-semibold transition hover:bg-accent"
-//               >
-//                 Contact Us
-//               </a>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
 import type { Metadata } from "next";
 import {
   GraduationCap,
   FileText,
   Compass,
   PhoneCall,
-  ArrowUpRight,
   Sparkles,
 } from "lucide-react";
 
@@ -162,24 +52,19 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <section className="relative min-h-screen bg-white py-24">
-      {/* Decorative Background Elements */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute -top-[10%] left-[10%] h-[400px] w-[400px] rounded-full bg-slate-50 blur-3xl opacity-50" />
-      </div>
-
+    <section className="relative min-h-screen bg-white py-12 md:py-16">
       <div className="mx-auto max-w-6xl px-6">
         {/* Header Section */}
         <header className="mb-20 max-w-3xl">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-600">
-            <Sparkles className="h-3 w-3" />
+          <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-600">
+            <Sparkles className="h-3 w-3 text-[#10b981]" />
             What we do best
           </div>
-          <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+          <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl ">
             Services built for <br />
             <span className="text-emerald-600">clarity & outcomes.</span>
           </h1>
-          <p className="mt-8 text-lg leading-relaxed text-slate-600 md:text-xl">
+          <p className="mt-3 text-base leading-relaxed text-slate-500 ">
             Whether you’re targeting top-tier government colleges or seeking the
             best private institution for your budget, our process removes the
             guesswork.
@@ -193,7 +78,7 @@ export default function ServicesPage() {
             return (
               <article
                 key={service.title}
-                className="group relative rounded-3xl border border-slate-100 bg-white p-8 transition-all duration-300 hover:border-emerald-200 hover:shadow-2xl hover:shadow-emerald-500/5"
+                className="group relative rounded-3xl border shadow-sm border-slate-100 bg-white p-8 transition-all duration-300 hover:border-emerald-200 hover:shadow-2xl hover:shadow-emerald-500/5 hover:border"
               >
                 <div className="flex flex-col gap-6">
                   <div
@@ -209,11 +94,6 @@ export default function ServicesPage() {
                     <p className="mt-3 leading-relaxed text-slate-500">
                       {service.description}
                     </p>
-                  </div>
-
-                  <div className="flex items-center gap-1 text-sm font-bold text-slate-400 transition-colors group-hover:text-emerald-600">
-                    Learn more
-                    <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </div>
                 </div>
               </article>

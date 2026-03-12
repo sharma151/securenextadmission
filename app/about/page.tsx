@@ -1,104 +1,3 @@
-// import type { Metadata } from "next";
-
-// export function generateMetadata(): Metadata {
-//   return {
-//     title: "About"
-//   };
-// }
-
-// export default function AboutPage() {
-//   return (
-//     <section className="bg-background">
-//       <div className="mx-auto max-w-6xl px-4 py-12">
-//         <header className="mb-10 space-y-4">
-//           <p className="inline-flex w-fit rounded-full border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
-//             Trusted Education Consultancy in Bhopal
-//           </p>
-//           <h1 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl">
-//             We help students choose the right path, faster.
-//           </h1>
-//           <p className="max-w-2xl text-muted-foreground">
-//             Secure Next Admission provides end-to-end admission guidance for
-//             Engineering, Medical, and Management programs. Our approach is
-//             transparent, data-driven, and personalized to every student’s goals.
-//           </p>
-//         </header>
-
-//         <div className="grid gap-6 md:grid-cols-3">
-//           <article className=" rounded-2xl border bg-card p-6 shadow-sm">
-//             <h2 className="text-lg font-semibold">Personalized Counselling</h2>
-//             <p className="mt-2 text-sm text-muted-foreground">
-//               One-to-one sessions to align courses, colleges, budget, and career
-//               aspirations.
-//             </p>
-//           </article>
-//           <article className=" rounded-2xl border bg-card p-6 shadow-sm">
-//             <h2 className="text-lg font-semibold">Smart Shortlisting</h2>
-//             <p className="mt-2 text-sm text-muted-foreground">
-//               Rank-based and preference-based guidance to shortlist the most
-//               suitable colleges.
-//             </p>
-//           </article>
-//           <article className=" rounded-2xl border bg-card p-6 shadow-sm">
-//             <h2 className="text-lg font-semibold">End-to-End Support</h2>
-//             <p className="mt-2 text-sm text-muted-foreground">
-//               From documents and deadlines to final reporting—no confusion, no
-//               missed steps.
-//             </p>
-//           </article>
-//         </div>
-
-//         <div className="mt-12 grid gap-8 lg:grid-cols-2 lg:items-center">
-//           <div className="space-y-4">
-//             <h2 className="text-2xl font-semibold">Why students choose us</h2>
-//             <ul className="space-y-2 text-sm text-muted-foreground">
-//               <li className="flex gap-2">
-//                 <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-//                 Clear, ethical guidance with transparent options.
-//               </li>
-//               <li className="flex gap-2">
-//                 <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-//                 Strong network across government and private institutions.
-//               </li>
-//               <li className="flex gap-2">
-//                 <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-//                 Fast responses and a student-first experience.
-//               </li>
-//             </ul>
-//             <div className="flex flex-col gap-3 sm:flex-row">
-//               <a
-//                 href="/services"
-//                 className="inline-flex items-center justify-center rounded-full bg-linear-to-r from-primary to-emerald-500 px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition hover:opacity-95"
-//               >
-//                 View Services
-//               </a>
-//               <a
-//                 href="/contact"
-//                 className="inline-flex items-center justify-center rounded-full border bg-card px-6 py-3 text-sm font-semibold transition hover:bg-accent"
-//               >
-//                 Contact Us
-//               </a>
-//             </div>
-//           </div>
-//           <aside className=" rounded-2xl border bg-card p-8 shadow-sm">
-//             <h3 className="text-lg font-semibold">Our Promise</h3>
-//             <p className="mt-2 text-sm text-muted-foreground">
-//               We recommend what’s best for the student—not what’s easiest. Every
-//               shortlist is curated with long-term career value in mind.
-//             </p>
-//             <div className="mt-6 rounded-xl border bg-muted/40 p-4">
-//               <p className="text-sm font-medium">Need a quick callback?</p>
-//               <p className="mt-1 text-xs text-muted-foreground">
-//                 Use the Quick Inquiry popup on Home or message us on WhatsApp.
-//               </p>
-//             </div>
-//           </aside>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
 import type { Metadata } from "next";
 import {
   CheckCircle2,
@@ -120,12 +19,6 @@ export function generateMetadata(): Metadata {
 export default function AboutPage() {
   return (
     <section className="relative overflow-hidden bg-white py-20">
-      {/* Background Glows */}
-      <div className="absolute top-0 left-0 -z-10 h-full w-full overflow-hidden pointer-events-none">
-        <div className="absolute -top-[5%] -left-[5%] h-[35%] w-[35%] rounded-full bg-emerald-50/70 blur-[100px]" />
-        <div className="absolute bottom-[5%] right-[0%] h-[25%] w-[25%] rounded-full bg-blue-50/70 blur-[100px]" />
-      </div>
-
       <div className="mx-auto max-w-6xl px-6">
         {/* Header Section */}
         <header className="mb-20 max-w-4xl space-y-6">
@@ -134,14 +27,14 @@ export default function AboutPage() {
             Trusted Education Consultancy in Bhopal
           </div>
 
-          <h1 className="text-balance text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-            We help students choose the <br />
-            <span className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+            We help students choose the <br  className="hidden sm:flex"/>
+            <span className="text-emerald-600">
               right path, faster.
             </span>
           </h1>
 
-          <p className="text-lg leading-relaxed text-slate-600 md:text-xl">
+          <p className="mt-3 text-base leading-relaxed text-slate-500">
             Secure Next Admission provides end-to-end admission guidance for
             <span className="font-semibold text-slate-900">
               {" "}

@@ -19,9 +19,11 @@ export function ContactForm() {
       const res = await fetch("/api/inquiry", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ ...payload, type: "contact" })
+        body: JSON.stringify({ ...payload, type: "contact" }),
       });
+
       if (!res.ok) throw new Error("Request failed");
+
       setStatus("success");
       form.reset();
     } catch {
@@ -32,76 +34,91 @@ export function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="grid gap-4 md:grid-cols-2">
-        <div className="space-y-1">
-          <label htmlFor="name" className="text-sm font-medium">
+    <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+      {/* Name + Phone */}
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="space-y-1.5">
+          <label htmlFor="name" className="text-sm font-medium text-slate-700">
             Full Name
           </label>
+
           <input
             id="name"
             name="name"
             required
-            className="w-full rounded-md border px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-base outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20"
             placeholder="Your name"
           />
         </div>
-        <div className="space-y-1">
-          <label htmlFor="phone" className="text-sm font-medium">
+
+        <div className="space-y-1.5">
+          <label htmlFor="phone" className="text-sm font-medium text-slate-700">
             Mobile Number
           </label>
+
           <input
             id="phone"
             name="phone"
             required
             pattern="[0-9]{10}"
-            className="w-full rounded-md border px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            inputMode="numeric"
+            className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-base outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20"
             placeholder="10-digit number"
           />
         </div>
       </div>
-      <div className="space-y-1">
-        <label htmlFor="email" className="text-sm font-medium">
+
+      {/* Email */}
+      <div className="space-y-1.5">
+        <label htmlFor="email" className="text-sm font-medium text-slate-700">
           Email
         </label>
+
         <input
           id="email"
           name="email"
           type="email"
-          className="w-full rounded-md border px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-base outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20"
           placeholder="you@example.com"
         />
       </div>
-      <div className="space-y-1">
-        <label htmlFor="message" className="text-sm font-medium">
+
+      {/* Message */}
+      <div className="space-y-1.5">
+        <label htmlFor="message" className="text-sm font-medium text-slate-700">
           Message
         </label>
+
         <textarea
           id="message"
           name="message"
           rows={4}
-          className="w-full rounded-md border px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="w-full resize-none rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-base outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 sm:rows-5"
           placeholder="Tell us what you're looking for..."
         />
       </div>
+
+      {/* Submit */}
       <button
         type="submit"
         disabled={submitting}
-        className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-primary to-emerald-500 px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition hover:opacity-95 disabled:opacity-70"
+        className="flex w-full items-center justify-center rounded-full bg-linear-to-r from-primary to-emerald-500 px-6 py-3.5 text-base font-semibold text-white shadow-lg transition hover:scale-[1.01] hover:shadow-xl disabled:opacity-70"
       >
         {submitting ? "Sending..." : "Send Message"}
       </button>
+
+      {/* Status */}
       {status === "success" && (
-        <p className="text-center text-xs text-muted-foreground">
-          Thanks! We’ll get back to you shortly.
+        <p className="text-center text-sm text-emerald-600">
+          ✅ Thanks! We’ll get back to you shortly.
         </p>
       )}
+
       {status === "error" && (
-        <p className="text-center text-xs text-destructive">
-          Something went wrong. Please try again.
+        <p className="text-center text-sm text-red-500">
+          ❌ Something went wrong. Please try again.
         </p>
       )}
     </form>
   );
 }
-

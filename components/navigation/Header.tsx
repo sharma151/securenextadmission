@@ -56,7 +56,7 @@ export function Header() {
 
         <div className="flex items-center gap-3">
           {/* <ThemeToggle /> */}
-          <div className="md:hidden">
+          <div className="md:hidden ">
             <Sheet>
               <SheetTrigger
                 aria-label="Open navigation"
@@ -64,12 +64,12 @@ export function Header() {
               >
                 <Menu className="h-4 w-4" />
               </SheetTrigger>
-              <SheetContent>
+              <SheetContent >
                 <SheetCloseButton />
                 <SheetHeader>
                   <SheetTitle>Menu</SheetTitle>
                 </SheetHeader>
-                <nav aria-label="Mobile navigation" className="mt-3">
+                <nav aria-label="Mobile navigation" className="mt-3 bg-white">
                   {navLinks.map((item) => {
                     const isActive =
                       pathname === item.href ||
@@ -94,7 +94,7 @@ export function Header() {
                             {isActive ? "•" : ""}
                           </span>
                         </a>
-                        {item.children && (
+                        {/* {item.children && (
                           <div className="mobile-nav-sub">
                             {item.children.map((child) => {
                               const childActive = pathname === child.href;
@@ -118,7 +118,7 @@ export function Header() {
                               );
                             })}
                           </div>
-                        )}
+                        )} */}
                       </div>
                     );
                   })}

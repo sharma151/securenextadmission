@@ -83,8 +83,17 @@
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
-  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system,
-    Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family:
+    var(--font-sans),
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    "Apple Color Emoji",
+    "Segoe UI Emoji";
 }
 
 h1,
@@ -143,12 +152,7 @@ h3 {
   z-index: 1;
   height: 100vh;
   width: min(90vw, 380px);
-  background: linear-gradient(
-    180deg,
-    hsl(var(--background)) 0%,
-    hsl(var(--background)) 55%,
-    hsl(var(--muted)) 100%
-  );
+  background: white;
   color: hsl(var(--foreground));
   border-left: 1px solid hsl(var(--border));
   padding: 18px 16px;
@@ -167,12 +171,14 @@ h3 {
   font-size: 16px;
   font-weight: 600;
   color: hsl(var(--foreground));
-  background: rgba(255, 255, 255, 0.0);
-  transition: background 180ms ease, transform 180ms ease;
+  background: rgba(255, 255, 255, 0);
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
 }
 
 .mobile-nav-link:hover {
-  background: rgba(99, 102, 241, 0.10);
+  background: rgba(99, 102, 241, 0.1);
   transform: translateX(-1px);
 }
 
@@ -192,11 +198,13 @@ h3 {
   color: hsl(var(--muted-foreground));
   padding: 8px 10px;
   border-radius: 12px;
-  transition: background 180ms ease, color 180ms ease;
+  transition:
+    background 180ms ease,
+    color 180ms ease;
 }
 
 .mobile-nav-sublink:hover {
-  background: rgba(16, 185, 129, 0.10);
+  background: rgba(16, 185, 129, 0.1);
   color: hsl(var(--foreground));
 }
 

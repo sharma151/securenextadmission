@@ -1,5 +1,6 @@
 "use client";
 
+import { X } from "lucide-react";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 import { createContext, useContext, useState } from "react";
 
@@ -13,7 +14,7 @@ const SheetContext = createContext<SheetContextValue | undefined>(undefined);
 export function Sheet({
   children,
   open,
-  onOpenChange
+  onOpenChange,
 }: {
   children: ReactNode;
   open?: boolean;
@@ -42,11 +43,7 @@ export function SheetTrigger({
   const ctx = useContext(SheetContext);
   if (!ctx) throw new Error("SheetTrigger must be used within Sheet");
   return (
-    <button
-      type="button"
-      onClick={() => ctx.setOpen(true)}
-      {...buttonProps}
-    >
+    <button type="button" onClick={() => ctx.setOpen(true)} {...buttonProps}>
       {children}
     </button>
   );
@@ -61,9 +58,7 @@ export function SheetContent({ children }: { children: ReactNode }) {
         className="mobile-sheet-backdrop"
         onClick={() => ctx.setOpen(false)}
       />
-      <div className="mobile-sheet-panel">
-        {children}
-      </div>
+      <div className="mobile-sheet-panel">{children}</div>
     </div>
   );
 }
@@ -84,10 +79,9 @@ export function SheetCloseButton() {
       type="button"
       onClick={() => ctx.setOpen(false)}
       aria-label="Close menu"
-      className="absolute right-4 top-4 text-muted-foreground hover:text-foreground"
+      className="absolute right-4 top-4 text-muted-foreground hover:text-foreground "
     >
-      ×
+      <X />
     </button>
   );
 }
-
