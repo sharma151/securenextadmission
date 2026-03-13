@@ -5,6 +5,7 @@ import { Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { navLinks } from "@/config/navigation";
 import Logo from "public/SNAlogo.svg";
+import Link from "next/link";
 import {
   Sheet,
   SheetTrigger,
@@ -43,7 +44,7 @@ export function Header() {
               pathname === item.href ||
               (item.href !== "/" && pathname.startsWith(`${item.href}/`));
             return (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 className={`group relative text-muted-foreground transition hover:text-foreground ${
@@ -56,13 +57,12 @@ export function Header() {
                     isActive ? "scale-x-100" : "group-hover:scale-x-100"
                   }`}
                 />
-              </a>
+              </Link>
             );
           })}
         </nav>
 
         <div className="flex items-center gap-3">
-          {/* <ThemeToggle /> */}
           <div className="md:hidden ">
             <Sheet>
               <SheetTrigger
@@ -84,49 +84,42 @@ export function Header() {
                         pathname.startsWith(`${item.href}/`));
                     return (
                       <div key={item.href}>
-                        <a
-                          href={item.href}
-                          className="mobile-nav-link"
-                          style={
-                            isActive
-                              ? {
-                                  background:
-                                    "linear-gradient(90deg, rgba(59,130,246,0.18), rgba(16,185,129,0.14))",
-                                  border: "1px solid rgba(59,130,246,0.25)",
-                                }
-                              : undefined
-                          }
-                        >
-                          <span>{item.title}</span>
-                          <span style={{ opacity: 0.65, fontSize: 12 }}>
-                            {isActive ? "•" : ""}
-                          </span>
-                        </a>
-                        {/* {item.children && (
-                          <div className="mobile-nav-sub">
-                            {item.children.map((child) => {
-                              const childActive = pathname === child.href;
-                              return (
-                                <a
-                                  key={child.href}
-                                  href={child.href}
-                                  className="mobile-nav-sublink"
-                                  style={
-                                    childActive
-                                      ? {
-                                          color: "hsl(var(--foreground))",
-                                          background:
-                                            "rgba(99, 102, 241, 0.12)"
-                                        }
-                                      : undefined
-                                  }
+                        {/* <SheetClose asChild> */}
+                          <Link
+                            href={item.href}
+                            className={`
+      flex items-center justify-between px-6 py-4 text-lg font-medium transition-all duration-200 rounded-2xl border
+      ${
+        isActive
+          ? "bg-[#E9FAF1] border-[#108A58]/20 text-[#108A58]"
+          : "bg-white border-transparent text-slate-600 hover:bg-slate-50"
+      }
+    `}
+                          >
+                            <span>{item.title}</span>
+
+                            {isActive ? (
+                              <span className="flex h-3 w-3 items-center justify-center rounded-full bg-[#108A58] text-white">
+                                <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
+                              </span>
+                            ) : (
+                              <span className="text-slate-300">
+                                <svg
+                                  width="20"
+                                  height="20"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  strokeWidth="2"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
                                 >
-                                  {child.title}
-                                </a>
-                              );
-                            })}
-                          </div>
-                        )} */}
+                                  <path d="m9 18 6-6-6-6" />
+                                </svg>
+                              </span>
+                            )}
+                          </Link>
+                        {/* </SheetClose> */}
                       </div>
                     );
                   })}
