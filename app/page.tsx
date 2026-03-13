@@ -1,7 +1,4 @@
-import { QuickInquiryDialog } from "@/components/forms/QuickInquiryDialog";
-import { InquiryForm } from "@/components/forms/InquiryForm";
 import type { Metadata } from "next";
-import { MainCarousel } from "@/components/carousel";
 
 export function generateMetadata(): Metadata {
   return {
@@ -12,8 +9,6 @@ export function generateMetadata(): Metadata {
 export default function HomePage() {
   return (
     <>
-      {/* <QuickInquiryDialog /> */}
-      {/* <MainCarousel /> */}
       <section className="bg-linear-to-b from-primary/5 via-background to-background">
         <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-16 lg:flex-row lg:items-center lg:py-24">
           <div className="flex-1 space-y-6">
@@ -59,18 +54,6 @@ export default function HomePage() {
               </li>
             </ul>
           </div>
-          {/* <div className="flex-1">
-            <div className="gradient-card mx-auto max-w-md rounded-2xl border bg-card p-6 shadow-lg shadow-primary/5">
-              <h2 className="mb-1 text-xl font-semibold">
-                Quick Admission Inquiry
-              </h2>
-              <p className="mb-4 text-sm text-muted-foreground">
-                Share basic details and our expert counsellor will call you
-                back within 24 hours.
-              </p>
-              <InquiryForm />
-            </div>
-          </div> */}
         </div>
       </section>
     </>

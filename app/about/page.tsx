@@ -28,10 +28,8 @@ export default function AboutPage() {
           </div>
 
           <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-            We help students choose the <br  className="hidden sm:flex"/>
-            <span className="text-emerald-600">
-              right path, faster.
-            </span>
+            We help students choose the <br className="hidden sm:flex" />
+            <span className="text-emerald-600">right path, faster.</span>
           </h1>
 
           <p className="mt-3 text-base leading-relaxed text-slate-500">
@@ -53,34 +51,41 @@ export default function AboutPage() {
               desc: "One-to-one sessions to align courses, colleges, budget, and career aspirations.",
               icon: <GraduationCap className="h-6 w-6 text-emerald-600" />,
               accent: "bg-emerald-600",
+              bg: "bg-emerald-50",
             },
             {
               title: "Smart Shortlisting",
               desc: "Rank-based and preference-based guidance to shortlist the most suitable colleges.",
               icon: <Microscope className="h-6 w-6 text-blue-600" />,
               accent: "bg-blue-600",
+              bg: "bg-blue-50",
             },
             {
               title: "End-to-End Support",
               desc: "From documents and deadlines to final reporting—no confusion, no missed steps.",
               icon: <Briefcase className="h-6 w-6 text-indigo-600" />,
               accent: "bg-indigo-600",
+              bg: "bg-indigo-50",
             },
           ].map((item, idx) => (
             <article
               key={idx}
-              className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 transition-all duration-300 hover:border-slate-300 hover:shadow-xl"
+              className="group shadow-sm relative flex flex-col justify-between overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 transition-all duration-300 hover:border-slate-300 hover:shadow-xl"
             >
-              <div>
-                <div className="mb-6 inline-flex rounded-2xl bg-slate-50 p-4 transition-colors group-hover:bg-white border border-transparent group-hover:border-slate-100">
+              <div className="flex gap-5 md:gap-6">
+                <div
+                  className={`inline-flex shrink-0 h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-xl md:rounded-2xl transition-transform duration-300 group-hover:scale-110 ${item.bg}`}
+                >
                   {item.icon}
                 </div>
-                <h2 className="text-xl font-bold text-slate-900">
-                  {item.title}
-                </h2>
-                <p className="mt-3 text-sm leading-relaxed text-slate-500">
-                  {item.desc}
-                </p>
+                <div>
+                  <h2 className="text-xl font-bold text-slate-900">
+                    {item.title}
+                  </h2>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-500">
+                    {item.desc}
+                  </p>
+                </div>
               </div>
               <div
                 className={`mt-6 h-1 w-12 rounded-full ${item.accent} opacity-20 transition-all duration-500 group-hover:w-full group-hover:opacity-100`}
@@ -97,9 +102,11 @@ export default function AboutPage() {
             </h2>
             <ul className="space-y-4">
               {[
+                "Trusted Admission Partners",
                 "Clear, ethical guidance with transparent options.",
                 "Strong network across government and private institutions.",
                 "Fast responses and a student-first experience.",
+                "Student support 24/7"
               ].map((text, i) => (
                 <li
                   key={i}
@@ -147,7 +154,7 @@ export default function AboutPage() {
                   Need a quick callback?
                 </p>
                 <p className="mt-1 text-xs text-slate-500 leading-relaxed">
-                  Use the Quick Inquiry popup on Home or message us directly on
+                  Use the Contact form in contact page or message us directly on
                   WhatsApp for priority support.
                 </p>
               </div>

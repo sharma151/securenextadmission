@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { navLinks } from "@/config/navigation";
 import Logo from "public/SNAlogo.svg";
 import {
