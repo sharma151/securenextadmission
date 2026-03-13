@@ -1,7 +1,7 @@
 "use client";
 "use client";
 import Image from "next/image";
-import { Menu } from "lucide-react";
+import { Menu, ChevronRight } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { navLinks } from "@/config/navigation";
 import Logo from "public/SNAlogo.svg";
@@ -12,7 +12,7 @@ import {
   SheetContent,
   SheetHeader,
   SheetTitle,
-  SheetCloseButton,
+  SheetClose,
 } from "@/components/ui/Sheet";
 
 export function Header() {
@@ -71,12 +71,11 @@ export function Header() {
               >
                 <Menu className="h-4 w-4" />
               </SheetTrigger>
-              <SheetContent>
-                <SheetCloseButton />
+              <SheetContent side="right" className="px-3">
                 <SheetHeader>
                   <SheetTitle>Menu</SheetTitle>
                 </SheetHeader>
-                <nav aria-label="Mobile navigation" className="mt-3 bg-white">
+                <nav aria-label="Mobile navigation">
                   {navLinks.map((item) => {
                     const isActive =
                       pathname === item.href ||
@@ -84,11 +83,11 @@ export function Header() {
                         pathname.startsWith(`${item.href}/`));
                     return (
                       <div key={item.href}>
-                        {/* <SheetClose asChild> */}
+                        <SheetClose asChild key={item.href}>
                           <Link
                             href={item.href}
                             className={`
-      flex items-center justify-between px-6 py-4 text-lg font-medium transition-all duration-200 rounded-2xl border
+      flex items-center justify-between px-5 py-3 text-lg font-medium transition-all duration-200 rounded-2xl border
       ${
         isActive
           ? "bg-[#E9FAF1] border-[#108A58]/20 text-[#108A58]"
@@ -99,27 +98,14 @@ export function Header() {
                             <span>{item.title}</span>
 
                             {isActive ? (
-                              <span className="flex h-3 w-3 items-center justify-center rounded-full bg-[#108A58] text-white">
+                              <span className="flex h-3 w-3 items-center justify-center rounded-full bg-[#108A58]">
                                 <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
                               </span>
                             ) : (
-                              <span className="text-slate-300">
-                                <svg
-                                  width="20"
-                                  height="20"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  strokeWidth="2"
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                >
-                                  <path d="m9 18 6-6-6-6" />
-                                </svg>
-                              </span>
+                              <ChevronRight className="h-5 w-5 text-slate-300" />
                             )}
                           </Link>
-                        {/* </SheetClose> */}
+                        </SheetClose>
                       </div>
                     );
                   })}

@@ -102,14 +102,8 @@ export default function AdmissionPage() {
                         // className="w-full space-y-2"
                       >
                         {group.courses.map((course) => (
-                          <AccordionItem
-                            key={course.name}
-                            value={course.name}
-                            // className="overflow-hidden rounded-xl border border-slate-50 bg-slate-50/50 transition-all data-[state=open]:border-[#d1fae5] data-[state=open]:bg-white"
-                          >
-                            <AccordionTrigger
-                            // className="px-4 py-3.5 hover:no-underline group/trigger"
-                            >
+                          <AccordionItem key={course.name} value={course.name}>
+                            <AccordionTrigger>
                               <div className="flex flex-1 items-center justify-between text-left">
                                 <span className="text-sm font-bold text-slate-700 group-data-[state=open]/trigger:text-[#059669]">
                                   {course.name}
@@ -118,12 +112,10 @@ export default function AdmissionPage() {
                                   <span className="text-[9px] font-bold text-slate-400 uppercase">
                                     {course.level}
                                   </span>
-                                  <ChevronDown className="h-4 w-4 text-slate-400 transition-transform duration-300 group-data-[state=open]/trigger:rotate-180 group-data-[state=open]/trigger:text-[#059669]" />
                                 </div>
                               </div>
                             </AccordionTrigger>
                             <AccordionContent
-                            // className="px-4 pb-4"
                             >
                               <div className="space-y-3 pt-1">
                                 {course.colleges && (

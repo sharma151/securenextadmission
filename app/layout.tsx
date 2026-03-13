@@ -38,7 +38,6 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${geist.variable} ${fontDisplay.variable} min-h-screen bg-background text-foreground antialiased`}
       >
-        {/* <ThemeProvider> */}
         <div className="flex min-h-screen flex-col">
           <Header />
           <main className="flex-1">{children}</main>
