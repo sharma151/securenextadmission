@@ -12,7 +12,7 @@ export function generateMetadata(): Metadata {
 
 export default function ContactPage() {
   return (
-    <section className="relative min-h-screen bg-white py-10 sm:py-12 md:py-16">
+    <section className="relative min-h-screen bg-white py-10   sm:py-12 md:py-16 md:px-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <header className="mb-10 max-w-2xl">
@@ -34,7 +34,6 @@ export default function ContactPage() {
 
         {/* Layout */}
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-5">
-          {/* Sidebar */}
           <div className="flex flex-col gap-4 sm:gap-6 lg:col-span-2">
             {[
               {
@@ -79,7 +78,7 @@ export default function ContactPage() {
                     {item.label}
                   </h2>
 
-                  <p className="text-sm sm:text-lg  font-extrabold text-slate-900 leading-tight wrap-break-words">
+                  <p className="text-sm sm:text-base  font-extrabold text-slate-900 leading-tight wrap-break-words">
                     {item.value}
                   </p>
 
