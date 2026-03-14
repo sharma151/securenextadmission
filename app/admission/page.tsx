@@ -22,7 +22,7 @@ const admissionCategories = Object.keys(
 
 export default function AdmissionPage() {
   return (
-    <section className="relative min-h-screen bg-white py-12 md:py-16">
+    <section className="relative min-h-screen bg-linear-to-b from-[#E9FAF1]/50 via-white to-white py-12 md:py-16">
       <div className="mx-auto max-w-6xl px-6">
         {/* Header Section */}
         <header className="mb-10 max-w-2xl">
@@ -47,7 +47,7 @@ export default function AdmissionPage() {
                 <TabsTrigger
                   key={category}
                   value={category}
-                  className="flex-1 rounded-full px-3 py-1.5 text-[11px] font-bold text-slate-800 transition-all duration-200 
+                  className="flex-1 rounded-full px-2 py-2 text-base font-bold text-slate-800 transition-all duration-200 
   hover:text-[#059669]
   /* Active State: Dark Green text + Very Light Green background */
   data-[state=active]:bg-[#ecfdf5] 
@@ -55,7 +55,7 @@ export default function AdmissionPage() {
   data-[state=active]:shadow-sm 
   data-[state=active]:ring-1 
   data-[state=active]:ring-[#d1fae5]
-  md:px-6 md:py-2 md:text-xs"
+  md:px-8 md:py-3 md:text-base"
                 >
                   {category}
                 </TabsTrigger>
@@ -79,11 +79,11 @@ export default function AdmissionPage() {
                     >
                       <header className="mb-4 flex items-start justify-between gap-4">
                         <div>
-                          <h2 className="text-xl font-bold text-slate-900">
+                          <h2 className=" text-lg md:text-xl font-bold text-slate-900">
                             {group.title}
                           </h2>
                           {group.subtitle && (
-                            <p className="text-[11px] font-medium text-slate-400 uppercase tracking-tight">
+                            <p className="text-xs md:text-sm font-medium text-slate-400 uppercase tracking-tight">
                               {group.subtitle}
                             </p>
                           )}
@@ -105,11 +105,11 @@ export default function AdmissionPage() {
                           <AccordionItem key={course.name} value={course.name}>
                             <AccordionTrigger>
                               <div className="flex flex-1 items-center justify-between text-left">
-                                <span className="text-sm font-bold text-slate-700 group-data-[state=open]/trigger:text-[#059669]">
+                                <span className="text-xs sm:text-sm font-bold text-slate-700 group-data-[state=open]/trigger:text-[#059669]">
                                   {course.name}
                                 </span>
                                 <div className="flex items-center gap-2">
-                                  <span className="text-[9px] font-bold text-slate-400 uppercase">
+                                  <span className="text-[10px] font-bold text-slate-400 uppercase">
                                     {course.level}
                                   </span>
                                 </div>

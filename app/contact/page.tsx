@@ -12,7 +12,7 @@ export function generateMetadata(): Metadata {
 
 export default function ContactPage() {
   return (
-    <section className="relative min-h-screen bg-white py-10   sm:py-12 md:py-16 md:px-12">
+    <section className="relative min-h-screen bg-linear-to-b from-[#E9FAF1]/50 via-white to-white py-10   sm:py-12 md:py-16 md:px-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <header className="mb-10 max-w-2xl">
@@ -38,7 +38,7 @@ export default function ContactPage() {
             {[
               {
                 label: "Phone",
-                value: "+91 9109250739",
+                value: "+91- 9343003774, 9691598475",
                 sub: "Mon - Sat, 10am to 7pm",
                 icon: Phone,
                 color: "text-emerald-600",
@@ -63,7 +63,7 @@ export default function ContactPage() {
             ].map((item, idx) => (
               <article
                 key={idx}
-                className="group flex items-center gap-4 rounded-2xl border border-slate-100 bg-white p-4 sm:p-5 lg:p-6 transition-all hover:border-slate-200 hover:shadow-lg hover:shadow-slate-200/40"
+                className="group flex items-center gap-4 rounded-2xl border border-slate-100 bg-white p-4 sm:p-5 lg:p-6 transition-all shadow-sm hover:border-slate-200 hover:shadow-lg hover:shadow-slate-200/40"
               >
                 <div
                   className={`flex h-10 w-10 sm:h-12 sm:w-12 lg:h-14 lg:w-14 shrink-0 items-center justify-center rounded-xl ${item.bg} transition-transform group-hover:scale-105`}
@@ -74,11 +74,11 @@ export default function ContactPage() {
                 </div>
 
                 <div className="min-w-0">
-                  <h2 className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400">
+                  <h2 className="text-[10px] text-xs font-bold uppercase tracking-wider text-slate-400">
                     {item.label}
                   </h2>
 
-                  <p className="text-sm sm:text-base  font-extrabold text-slate-900 leading-tight wrap-break-words">
+                  <p className="text-sm md:text-xs xl:text-sm  font-extrabold text-slate-900 leading-tight wrap-break-words">
                     {item.value}
                   </p>
 
@@ -101,7 +101,7 @@ export default function ContactPage() {
           </div>
 
           {/* Form */}
-          <div className="relative rounded-3xl border border-slate-100 bg-white p-6 sm:p-8 lg:p-12 shadow-xl shadow-slate-200/40 lg:col-span-3">
+          <div className="relative rounded-3xl border border-slate-100 bg-white p-6 sm:p-8 lg:p-12 shadow-sm  lg:col-span-3">
             <div className="mb-6 sm:mb-8">
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
                 Send a message

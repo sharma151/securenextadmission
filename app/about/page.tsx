@@ -18,7 +18,7 @@ export function generateMetadata(): Metadata {
 
 export default function AboutPage() {
   return (
-    <section className="relative overflow-hidden bg-white py-20">
+    <section className="relative overflow-hidden  py-20 bg-linear-to-b from-[#E9FAF1]/50 via-white to-white">
       <div className="mx-auto max-w-6xl px-6">
         {/* Header Section */}
         <header className="mb-20 max-w-4xl space-y-6">
@@ -106,13 +106,13 @@ export default function AboutPage() {
                 "Clear, ethical guidance with transparent options.",
                 "Strong network across government and private institutions.",
                 "Fast responses and a student-first experience.",
-                "Student support 24/7"
+                "Student support 24/7",
               ].map((text, i) => (
                 <li
                   key={i}
                   className="flex items-center gap-4 rounded-2xl border border-slate-100 bg-slate-50/50 p-4 transition-all hover:bg-white hover:shadow-sm"
                 >
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
                     <CheckCircle2 className="h-5 w-5" />
                   </div>
                   <span className="font-medium text-slate-700">{text}</span>
@@ -137,10 +137,10 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <aside className="relative group">
-            <div className="relative z-10 overflow-hidden rounded-[2.5rem] border border-slate-200 bg-white p-10 shadow-2xl">
-              <h3 className="text-2xl font-bold text-slate-900">Our Promise</h3>
-              <p className="mt-6 text-lg leading-relaxed text-slate-600">
+          <aside>
+            <div className="relative z-10 overflow-hidden rounded-[2.5rem] border border-slate-200 bg-slate-900 p-10 shadow-2xl">
+              <h3 className="text-2xl font-bold text-white">Our Promise</h3>
+              <p className="mt-6 text-lg leading-relaxed text-slate-500">
                 We recommend what’s{" "}
                 <span className="text-emerald-600 font-semibold italic">
                   best for the student
@@ -149,18 +149,18 @@ export default function AboutPage() {
                 career value in mind.
               </p>
 
-              <div className="mt-10 rounded-2xl bg-slate-50 p-6 border border-slate-100">
-                <p className="text-sm font-bold text-slate-900">
+              <div className="mt-10 rounded-2xl bg-slate-700 p-6">
+                <p className="text-sm font-bold text-white">
                   Need a quick callback?
                 </p>
-                <p className="mt-1 text-xs text-slate-500 leading-relaxed">
+                <p className="mt-1 text-xs text-slate-300 leading-relaxed">
                   Use the Contact form in contact page or message us directly on
                   WhatsApp for priority support.
                 </p>
               </div>
+              {/* Fixed Background Glow: Changed -right-24 to 0 and added max-w-full to prevent overflow */}
+              <div className="pointer-events-none absolute bottom-0 right-0 h-64 w-64 translate-x-1/2 translate-y-1/2 rounded-full bg-emerald-500/20 blur-[80px]" />
             </div>
-            {/* Background Offset Card for depth */}
-            <div className="absolute -bottom-4 -right-4 -z-10 h-full w-full rounded-[2.5rem] bg-slate-100" />
           </aside>
         </div>
       </div>

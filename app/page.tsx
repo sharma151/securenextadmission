@@ -232,9 +232,9 @@ export default function HomePage() {
       </section>
 
       {/* 4. FINAL CTA */}
-      <section className="py-24 text-center">
-        <div className="mx-auto max-w-4xl px-4">
-          <h2 className="text-3xl font-bold sm:text-5xl">
+      <section className="relative  overflow-hidden  bg-slate-900 p-8 md:p-16 flex justify-center">
+        <div className="mx-auto max-w-4xl px-4 flex flex-col items-center">
+          <h2 className="text-3xl font-bold sm:text-4xl text-white">
             Take the First Step Towards Your Future.
           </h2>
           <p className="mt-6 text-lg text-slate-600">
@@ -250,6 +250,7 @@ export default function HomePage() {
             </a>
           </div>
         </div>
+        <div className="pointer-events-none absolute bottom-0 right-0 h-64 w-64 translate-x-1/2 translate-y-1/2 rounded-full bg-emerald-500/20 blur-[80px]" />
       </section>
     </main>
   );
