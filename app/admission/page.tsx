@@ -55,7 +55,7 @@ const admissionCategories = Object.keys(
 
 export default function AdmissionPage() {
   return (
-    <section className="relative min-h-screen bg-linear-to-b from-[#E9FAF1]/50 via-white to-white py-12 md:py-16">
+    <section className="relative min-h-screen bg-linear-to-b from-[#E9FAF1]/50 via-white to-white py-12 md:py-16  ">
       <div className="mx-auto max-w-6xl px-6">
         {/* Header Section */}
         <header className="mb-10 max-w-2xl">

@@ -42,7 +42,7 @@ export function generateMetadata(): Metadata {
 
 export default function ContactPage() {
   return (
-    <section className="relative min-h-screen bg-linear-to-b from-[#E9FAF1]/50 via-white to-white py-10   sm:py-12 md:py-16 md:px-12">
+    <section className="relative min-h-screen bg-linear-to-b from-[#E9FAF1]/50 via-white to-white py-10  sm:py-12 md:py-16 md:px-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <header className="mb-10 max-w-2xl">
