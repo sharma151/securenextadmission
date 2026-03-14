@@ -74,12 +74,12 @@ export default function HomePage() {
     <main className="min-h-screen bg-white font-sans text-slate-900">
       {/* 1. HERO SECTION */}
       <section className="relative overflow-hidden bg-linear-to-b from-[#E9FAF1]/50 via-white to-white py-16 lg:py-24">
-        <div className="mx-auto max-w-6xl px-4">
+        <div className="mx-auto max-w-6xl px-6">
           <div className="flex flex-col gap-12 lg:flex-row lg:items-center">
-            <div className="flex-1 space-y-8">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#E9FAF1] px-4 py-1.5 text-sm font-bold text-[#108A58]">
+            <div className="flex-1 space-y-4">
+              <div className="inline-flex items-center gap-2 rounded-full border border-emerald-100 bg-emerald-50 px-2 sm:px-4 py-1 text-xs sm:text-sm font-semibold text-emerald-700">
                 <MapPin size={16} />
-                <span>Bhopal's Premier Education Consultants</span>
+                <span>Bhopal's Education Consultants</span>
               </div>
               <h1 className="text-balance text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-7xl">
                 Secure Your{" "}

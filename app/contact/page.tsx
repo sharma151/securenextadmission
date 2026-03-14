@@ -16,8 +16,8 @@ export default function ContactPage() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <header className="mb-10 max-w-2xl">
-          <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-600">
-            <MessageSquare className="h-3 w-3 text-[#10b981]" />
+          <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-xs sm:text-sm border font-bold uppercase tracking-wider text-slate-600">
+            <MessageSquare className="size-4 text-emerald-600" />
             LET'S TALK
           </div>
 
@@ -115,10 +115,6 @@ export default function ContactPage() {
 
             <div className="relative z-10">
               <ContactForm />
-            </div>
-
-            <div className="absolute bottom-6 right-6 opacity-[0.03] grayscale hidden sm:block">
-              <Clock className="h-24 w-24" />
             </div>
           </div>
         </div>

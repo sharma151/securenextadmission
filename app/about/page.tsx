@@ -18,12 +18,12 @@ export function generateMetadata(): Metadata {
 
 export default function AboutPage() {
   return (
-    <section className="relative overflow-hidden  py-20 bg-linear-to-b from-[#E9FAF1]/50 via-white to-white">
+    <section className="relative overflow-hidden  py-16 bg-linear-to-b from-[#E9FAF1]/50 via-white to-white">
       <div className="mx-auto max-w-6xl px-6">
         {/* Header Section */}
-        <header className="mb-20 max-w-4xl space-y-6">
-          <div className="inline-flex items-center gap-2 rounded-full border border-emerald-100 bg-emerald-50 px-4 py-1.5 text-sm font-semibold text-emerald-700">
-            <ShieldCheck className="h-4 w-4" />
+        <header className="mb-20 max-w-4xl space-y-4">
+          <div className="inline-flex items-center gap-2 rounded-full border border-emerald-100 bg-emerald-50 px-2 sm:px-4 py-1 text-xs sm:text-sm font-semibold text-emerald-700">
+            <ShieldCheck className="size-4" />
             Trusted Education Consultancy in Bhopal
           </div>
 
@@ -110,7 +110,7 @@ export default function AboutPage() {
               ].map((text, i) => (
                 <li
                   key={i}
-                  className="flex items-center gap-4 rounded-2xl border border-slate-100 bg-slate-50/50 p-4 transition-all hover:bg-white hover:shadow-sm"
+                  className="flex items-center gap-4 rounded-2xl border border-slate-100 bg-slate-50/50 p-4 transition-all hover:bg-white shadow-sm"
                 >
                   <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
                     <CheckCircle2 className="h-5 w-5" />
@@ -123,14 +123,14 @@ export default function AboutPage() {
             <div className="flex flex-col gap-4 pt-4 sm:flex-row">
               <a
                 href="/services"
-                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-8 py-4 text-sm font-bold text-white transition-all hover:bg-emerald-600"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-8 py-4 text-sm font-bold text-white transition-all hover:bg-emerald-600 shadow-sm"
               >
                 View Services
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-8 py-4 text-sm font-bold text-slate-900 transition-all hover:bg-slate-50"
+                className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-8 py-4 text-sm font-bold text-slate-900 transition-all hover:bg-slate-50 shadow-sm"
               >
                 Contact Us
               </a>

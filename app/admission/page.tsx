@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/Accordion";
 import { Badge } from "@/components/ui/Badge";
 import type { Metadata } from "next";
-import { ChevronDown, Star, Sparkles, BookOpen } from "lucide-react";
+import { Star, Sparkles, BookOpen } from "lucide-react";
 
 export function generateMetadata(): Metadata {
   return {
@@ -26,8 +26,8 @@ export default function AdmissionPage() {
       <div className="mx-auto max-w-6xl px-6">
         {/* Header Section */}
         <header className="mb-10 max-w-2xl">
-          <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-600">
-            <Sparkles className="h-3 w-3 text-[#10b981]" />
+          <div className="mb-3 inline-flex border items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-600">
+            <Sparkles className="size-4 text-[#10b981]" />
             LET'S TALK
           </div>
           <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -115,8 +115,7 @@ export default function AdmissionPage() {
                                 </div>
                               </div>
                             </AccordionTrigger>
-                            <AccordionContent
-                            >
+                            <AccordionContent>
                               <div className="space-y-3 pt-1">
                                 {course.colleges && (
                                   <div className="rounded-lg bg-[#f0fdf4] p-3 border border-[#d1fae5]">
