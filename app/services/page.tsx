@@ -9,9 +9,40 @@ import {
 
 export function generateMetadata(): Metadata {
   return {
-    title: "Our Services | Secure Next Admission",
+    title: "Our Services | Secure Next Admission - Bhopal",
+
     description:
-      "Expert admission services for Engineering, Medical, and Management students.",
+      "Explore the admission services offered by Secure Next Admission in Bhopal including Engineering, Medical, and MBA counselling, college selection, and admission support.",
+
+    keywords: [
+      "education consultancy services Bhopal",
+      "engineering admission services",
+      "medical admission consultancy",
+      "MBA admission guidance",
+      "college admission services India",
+    ],
+
+    openGraph: {
+      title: "Admission Services | Secure Next Admission",
+      description:
+        "Comprehensive admission services for Engineering, Medical, and Management courses.",
+      url: "https://securenextadmission.com/services",
+      siteName: "Secure Next Admission",
+      locale: "en_IN",
+      type: "website",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: "Admission Services | Secure Next Admission",
+      description:
+        "Expert admission support for top colleges and universities.",
+    },
+
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 

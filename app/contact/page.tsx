@@ -4,9 +4,39 @@ import { ContactForm } from "@/components/forms/ContactForm";
 
 export function generateMetadata(): Metadata {
   return {
-    title: "Contact Us | Secure Next Admission",
+    title: "Contact Us | Secure Next Admission - Bhopal",
+
     description:
-      "Get expert admission guidance. Reach out to us for Engineering, Medical, and Management counselling.",
+      "Contact Secure Next Admission in Bhopal for expert counselling on Engineering, Medical, and Management admissions. Get personalized guidance to secure seats in top colleges.",
+
+    keywords: [
+      "Contact admission consultant Bhopal",
+      "Education consultancy contact Bhopal",
+      "college admission help Bhopal",
+      "Secure Next Admission contact",
+    ],
+
+    openGraph: {
+      title: "Contact Secure Next Admission",
+      description:
+        "Reach out for professional admission counselling and career guidance.",
+      url: "https://securenextadmission.com/contact",
+      siteName: "Secure Next Admission",
+      locale: "en_IN",
+      type: "website",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: "Contact Secure Next Admission",
+      description:
+        "Get admission counselling for Engineering, Medical, and MBA programs.",
+    },
+
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 

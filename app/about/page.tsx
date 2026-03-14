@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import {
   CheckCircle2,
   ArrowRight,
@@ -7,12 +6,44 @@ import {
   Briefcase,
   ShieldCheck,
 } from "lucide-react";
-
+import type { Metadata } from "next";
 export function generateMetadata(): Metadata {
   return {
-    title: "About | Secure Next Admission",
+    title: "About Us | Secure Next Admission - Education Consultancy Bhopal",
+
     description:
-      "Learn how we help students navigate Engineering, Medical, and Management admissions.",
+      "Learn about Secure Next Admission, a trusted education consultancy in Bhopal guiding students for Engineering, Medical, and MBA admissions across top colleges in India.",
+
+    keywords: [
+      "About Secure Next Admission",
+      "Education consultancy Bhopal",
+      "Engineering admission guidance",
+      "Medical admission consultancy",
+      "MBA admission consultants Bhopal",
+      "college admission consultancy India",
+    ],
+
+    openGraph: {
+      title: "About Secure Next Admission | Education Consultancy in Bhopal",
+      description:
+        "Discover how Secure Next Admission helps students achieve their dream careers with expert guidance for engineering, medical, and management admissions.",
+      url: "https://securenextadmission.com/about",
+      siteName: "Secure Next Admission",
+      locale: "en_IN",
+      type: "website",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: "About Secure Next Admission",
+      description:
+        "Trusted admission consultancy in Bhopal helping students secure seats in top colleges.",
+    },
+
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 

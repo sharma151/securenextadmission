@@ -5,6 +5,8 @@ import { WhatsAppFab } from "@/components/ui/WhatsAppFab";
 import { navLinks } from "@/config/navigation";
 import { Inter, Poppins, Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -13,14 +15,49 @@ const fontDisplay = Poppins({
   weight: ["600", "700"],
   variable: "--font-display",
 });
-
 export const metadata: Metadata = {
+  metadataBase: new URL("https://securenextadmission.com"),
+
   title: {
     default: "Secure Next Admission",
     template: "%s | Best Education Consultancy Bhopal",
   },
+
   description:
-    "Secure Next Admission is a high-performance education consultancy in Bhopal specializing in engineering, medical, and management admissions.",
+    "Secure Next Admission is a trusted education consultancy in Bhopal helping students secure admissions in engineering, medical, MBA, and top universities across India.",
+
+  keywords: [
+    "Education consultancy Bhopal",
+    "Engineering admission Bhopal",
+    "Medical admission consultancy",
+    "MBA admission consultant",
+    "College admission guidance Bhopal",
+    "Secure Next Admission",
+  ],
+
+  authors: [{ name: "Secure Next Admission" }],
+
+  openGraph: {
+    title: "Secure Next Admission | Best Education Consultancy in Bhopal",
+    description:
+      "Expert guidance for engineering, medical, and management admissions across India.",
+    url: "https://securenextadmission.com",
+    siteName: "Secure Next Admission",
+    locale: "en_IN",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Secure Next Admission",
+    description:
+      "Best consultancy in Bhopal for engineering, medical, and MBA admissions.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -67,6 +104,8 @@ export default function RootLayout({
           </footer>
           <WhatsAppFab />
         </div>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
