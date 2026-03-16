@@ -12,6 +12,7 @@ import {
   PhoneCall,
   ArrowRight,
 } from "lucide-react";
+import CollegesCarousel from "@/components/collegecarousel";
 
 export const metadata: Metadata = {
   title: "Bhopal Admission Consultancy | Expert Engineering & Medical Guidance",
@@ -186,6 +187,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <CollegesCarousel />
 
       {/* 3. WHY CHOOSE US (The Expert Advantage) */}
       <section className="bg-slate-50 py-24 mt-15">
