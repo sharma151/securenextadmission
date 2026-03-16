@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import emailjs from "emailjs-com";
 
 export function ContactForm() {
   const [submitting, setSubmitting] = useState(false);
@@ -14,19 +15,12 @@ export function ContactForm() {
     const form = e.currentTarget;
     const formData = new FormData(form);
     const payload = Object.fromEntries(formData.entries());
-
     try {
-      const res = await fetch("/api/inquiry", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ ...payload, type: "contact" }),
-      });
-
-      if (!res.ok) throw new Error("Request failed");
-
+      emailjs.init("g2dbZEziBg4PaCeWz");
+      await emailjs.send("service_lgycjmt", "template_s523us8", payload);
       setStatus("success");
-      form.reset();
-    } catch {
+    } catch (err) {
+      console.error("FAILED...", err);
       setStatus("error");
     } finally {
       setSubmitting(false);
@@ -110,13 +104,13 @@ export function ContactForm() {
       {/* Status */}
       {status === "success" && (
         <p className="text-center text-sm text-emerald-600">
-          ✅ Thanks! We’ll get back to you shortly.
+          Message sent successfully, We’ll get back to you shortly.
         </p>
       )}
 
       {status === "error" && (
         <p className="text-center text-sm text-red-500">
-          ❌ Something went wrong. Please try again.
+          Failed to send message. Please try again later. ❌
         </p>
       )}
     </form>

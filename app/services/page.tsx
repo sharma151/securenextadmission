@@ -9,9 +9,40 @@ import {
 
 export function generateMetadata(): Metadata {
   return {
-    title: "Our Services | Secure Next Admission",
+    title: "Our Services | Secure Next Admission - Bhopal",
+
     description:
-      "Expert admission services for Engineering, Medical, and Management students.",
+      "Explore the admission services offered by Secure Next Admission in Bhopal including Engineering, Medical, and MBA counselling, college selection, and admission support.",
+
+    keywords: [
+      "education consultancy services Bhopal",
+      "engineering admission services",
+      "medical admission consultancy",
+      "MBA admission guidance",
+      "college admission services India",
+    ],
+
+    openGraph: {
+      title: "Admission Services | Secure Next Admission",
+      description:
+        "Comprehensive admission services for Engineering, Medical, and Management courses.",
+      url: "https://securenextadmission.com/services",
+      siteName: "Secure Next Admission",
+      locale: "en_IN",
+      type: "website",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: "Admission Services | Secure Next Admission",
+      description:
+        "Expert admission support for top colleges and universities.",
+    },
+
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 
@@ -53,12 +84,12 @@ const services = [
 export default function ServicesPage() {
   return (
     /* Added overflow-x-hidden to the main container to prevent any horizontal scroll */
-    <section className="relative w-full overflow-x-hidden bg-white py-12 md:py-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <section className="relative w-full overflow-x-hidden bg-linear-to-b from-[#E9FAF1]/50 via-white to-white py-12 md:py-24">
+      <div className="mx-auto max-w-6xl px-6">
         {/* Header Section */}
         <header className="mb-12 md:mb-20 max-w-3xl">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-600">
-            <Sparkles className="h-3 w-3 text-[#10b981]" />
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border bg-slate-100 px-3 py-1 text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-600">
+            <Sparkles className="size-4 text-emerald-600" />
             What we do best
           </div>
           <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">

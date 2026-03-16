@@ -86,7 +86,7 @@ export const admissions: Record<string, CourseGroup[]> = {
       ],
     },
     {
-      title: "B.Tech and B.E. Branches",
+      title: "B.Tech Branches",
       subtitle: "4-year degree with deep specialization",
       tags: ["High Demand", "Innovative"],
       courses: [
@@ -168,35 +168,39 @@ export const admissions: Record<string, CourseGroup[]> = {
           notes: "Deep research into machine learning algorithms and big data.",
         },
         {
+          name: "M.Tech in Machience Design ",
+          level: "M.Tech",
+          notes: "Deep research into machine learning algorithms and big data.",
+        },
+        {
+          name: "M.Tech in Degital Communication",
+          level: "M.Tech",
+          notes: "Deep research into machine learning algorithms and big data.",
+        },
+        {
+          name: "M.Tech in CTM Engineering",
+          level: "M.Tech",
+          notes: "Deep research into machine learning algorithms and big data.",
+        },
+        {
           name: "M.Tech in VLSI & Embedded Systems",
           level: "M.Tech",
           notes:
             "Core specialization for the semiconductor and chip design industry.",
         },
         {
-          name: "M.Tech in Cybersecurity",
+          name: "M.Tech in Thermal Engineering",
           level: "M.Tech",
           notes:
-            "Focus on advanced cryptography, digital forensics, and network defense.",
+            "Advanced thermal engineering specialization for complex architectures.",
         },
         {
-          name: "M.Tech in Robotics & Autonomous Systems",
-          level: "M.Tech",
-          notes: "Research into mechatronics and self-driving technologies.",
-        },
-        {
-          name: "M.Tech in Structural Engineering",
-          level: "M.Tech",
-          notes:
-            "Advanced civil engineering specialization for complex architectures.",
-        },
-        {
-          name: "M.Tech in Quantum Technology",
+          name: "M.Tech in Power System",
           level: "M.Tech",
           notes: "Emerging field for next-gen computing and communication.",
         },
         {
-          name: "M.Tech in Renewable & Sustainable Energy",
+          name: "M.Tech in Production Engineering",
           level: "M.Tech",
           notes: "Focus on green hydrogen, solar thermal, and carbon capture.",
         },
@@ -372,6 +376,7 @@ export const admissions: Record<string, CourseGroup[]> = {
           notes:
             "Autonomous, industry-linked programs often offering higher practical exposure.",
         },
+
         {
           name: "MBA in Supply Chain & Logistics",
           level: "PG",
@@ -381,6 +386,11 @@ export const admissions: Record<string, CourseGroup[]> = {
           name: "MBA in Digital Business / E-Commerce",
           level: "PG",
           notes: "Prepares leaders for the platform-based digital economy.",
+        },
+        {
+          name: "PGDCA (Post graduate Diploma in Computer application",
+          level: "PG",
+          notes: "Traditional high-demand pillars for corporate management.",
         },
       ],
     },
@@ -400,6 +410,92 @@ export const admissions: Record<string, CourseGroup[]> = {
           level: "UG+PG",
           notes:
             "Ideal for technical students aiming for product management or CTO roles.",
+        },
+      ],
+    },
+  ],
+  "General & Education": [
+    {
+      title: "Academic Sciences",
+      subtitle: "Core scientific research and theory",
+      tags: ["Core", "Research"],
+      courses: [
+        {
+          name: "B.Sc (Physics / Chemistry / Maths)",
+          level: "UG",
+          notes:
+            "Fundamental science degrees focusing on theoretical and lab excellence.",
+        },
+        {
+          name: "B.Sc in Computer Science / IT",
+          level: "UG",
+          notes:
+            "More academically focused than B.Tech, ideal for software theory.",
+        },
+        {
+          name: "M.Sc (Physics / Chemistry / Biology)",
+          level: "PG",
+          notes:
+            "Post-graduate specialization required for research (CSIR-NET pathway).",
+        },
+        {
+          name: "M.Sc in Data Science / Statistics",
+          level: "PG",
+          notes:
+            "Advanced analytical degree for mathematical modeling and big data.",
+        },
+      ],
+    },
+    {
+      title: "Education & Teaching",
+      subtitle: "Professional programs for educators",
+      tags: ["Skill-Based", "Early Professional"],
+      courses: [
+        {
+          name: "D.El.Ed (Diploma in Elementary Education)",
+          level: "Diploma",
+          notes: "Qualifying program for primary school teaching (1st to 5th).",
+        },
+        {
+          name: "B.Ed (Bachelor of Education)",
+          level: "UG",
+          notes:
+            "Professional degree required to teach in secondary and higher secondary schools.",
+        },
+        {
+          name: "M.Ed (Master of Education)",
+          level: "PG",
+          notes:
+            "Advanced program for educational administration and pedagogy research.",
+        },
+        {
+          name: "B.P.Ed (Physical Education)",
+          level: "UG",
+          notes: "Focuses on sports science, physical training, and coaching.",
+        },
+      ],
+    },
+    {
+      title: "Humanities & Social Sciences",
+      subtitle: "Liberal arts and administrative foundations",
+      tags: ["Core", "Strategic"],
+      courses: [
+        {
+          name: "B.A. (English / Psychology / Economics)",
+          level: "UG",
+          notes:
+            "Diverse fields ideal for civil service (UPSC) preparation or journalism.",
+        },
+        {
+          name: "B.Com (General / Hons)",
+          level: "UG",
+          notes: "Foundation for CA, CS, and corporate accounting roles.",
+        },
+        {
+          name: "B.Lib.Sc (Library & Information Science)",
+          level: "UG",
+          notes:
+            "Specialized training for library management and information curation.",
         },
       ],
     },

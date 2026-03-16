@@ -12,6 +12,7 @@ import {
   PhoneCall,
   ArrowRight,
 } from "lucide-react";
+import CollegesCarousel from "@/components/collegecarousel";
 
 export const metadata: Metadata = {
   title: "Bhopal Admission Consultancy | Expert Engineering & Medical Guidance",
@@ -41,7 +42,7 @@ function ExpertiseCard({
   courses: string[];
 }) {
   return (
-    <div className="group shadow-sm flex gap-4 relative rounded-3xl border border-slate-100 bg-white p-6 transition-all hover:border-[#108A58]/20 hover:shadow-xl hover:shadow-[#108A58]/5">
+    <div className="group shadow-sm flex sm:flex-col  gap-4 relative rounded-3xl border border-slate-100 bg-white p-6 transition-all hover:border-[#108A58]/20 hover:shadow-xl hover:shadow-[#108A58]/5">
       <IconBox>{icon}</IconBox>
       <div>
         <h3 className=" text-xl font-bold text-slate-900">{title}</h3>
@@ -71,15 +72,15 @@ function ExpertiseCard({
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-white font-sans text-slate-900">
+    <main className="min-h-screen bg-white font-sans text-slate-900 ">
       {/* 1. HERO SECTION */}
       <section className="relative overflow-hidden bg-linear-to-b from-[#E9FAF1]/50 via-white to-white py-16 lg:py-24">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="flex flex-col gap-12 lg:flex-row lg:items-center">
-            <div className="flex-1 space-y-8">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#E9FAF1] px-4 py-1.5 text-sm font-bold text-[#108A58]">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="flex flex-col gap-12 lg:flex-row lg:items-center ">
+            <div className="flex-1 space-y-4">
+              <div className="inline-flex items-center gap-2 rounded-full border border-emerald-100 bg-emerald-50 px-2 sm:px-4 py-1 text-xs sm:text-sm font-semibold text-emerald-700">
                 <MapPin size={16} />
-                <span>Bhopal's Premier Education Consultants</span>
+                <span>Bhopal's Education Consultants</span>
               </div>
               <h1 className="text-balance text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-7xl">
                 Secure Your{" "}
@@ -187,8 +188,10 @@ export default function HomePage() {
         </div>
       </section>
 
+      <CollegesCarousel />
+
       {/* 3. WHY CHOOSE US (The Expert Advantage) */}
-      <section className="bg-slate-50 py-24">
+      <section className="bg-slate-50 py-24 mt-15">
         <div className="mx-auto max-w-6xl px-4">
           <div className="flex flex-col gap-16 lg:flex-row lg:items-center">
             <div className="flex-1 space-y-8">
@@ -232,9 +235,9 @@ export default function HomePage() {
       </section>
 
       {/* 4. FINAL CTA */}
-      <section className="py-24 text-center">
-        <div className="mx-auto max-w-4xl px-4">
-          <h2 className="text-3xl font-bold sm:text-5xl">
+      <section className="relative  overflow-hidden  bg-slate-900 p-8 md:p-16 flex justify-center">
+        <div className="mx-auto max-w-4xl px-4 flex flex-col items-center">
+          <h2 className="text-3xl font-bold sm:text-4xl text-white">
             Take the First Step Towards Your Future.
           </h2>
           <p className="mt-6 text-lg text-slate-600">
@@ -250,6 +253,7 @@ export default function HomePage() {
             </a>
           </div>
         </div>
+        <div className="pointer-events-none absolute bottom-0 right-0 h-64 w-64 translate-x-1/2 translate-y-1/2 rounded-full bg-emerald-500/20 blur-[80px]" />
       </section>
     </main>
   );
