@@ -86,7 +86,7 @@ export const admissions: Record<string, CourseGroup[]> = {
       ],
     },
     {
-      title: "B.Tech and B.E. Branches",
+      title: "B.Tech Branches",
       subtitle: "4-year degree with deep specialization",
       tags: ["High Demand", "Innovative"],
       courses: [
@@ -168,35 +168,39 @@ export const admissions: Record<string, CourseGroup[]> = {
           notes: "Deep research into machine learning algorithms and big data.",
         },
         {
+          name: "M.Tech in Machience Design ",
+          level: "M.Tech",
+          notes: "Deep research into machine learning algorithms and big data.",
+        },
+        {
+          name: "M.Tech in Degital Communication",
+          level: "M.Tech",
+          notes: "Deep research into machine learning algorithms and big data.",
+        },
+        {
+          name: "M.Tech in CTM Engineering",
+          level: "M.Tech",
+          notes: "Deep research into machine learning algorithms and big data.",
+        },
+        {
           name: "M.Tech in VLSI & Embedded Systems",
           level: "M.Tech",
           notes:
             "Core specialization for the semiconductor and chip design industry.",
         },
         {
-          name: "M.Tech in Cybersecurity",
+          name: "M.Tech in Thermal Engineering",
           level: "M.Tech",
           notes:
-            "Focus on advanced cryptography, digital forensics, and network defense.",
+            "Advanced thermal engineering specialization for complex architectures.",
         },
         {
-          name: "M.Tech in Robotics & Autonomous Systems",
-          level: "M.Tech",
-          notes: "Research into mechatronics and self-driving technologies.",
-        },
-        {
-          name: "M.Tech in Structural Engineering",
-          level: "M.Tech",
-          notes:
-            "Advanced civil engineering specialization for complex architectures.",
-        },
-        {
-          name: "M.Tech in Quantum Technology",
+          name: "M.Tech in Power System",
           level: "M.Tech",
           notes: "Emerging field for next-gen computing and communication.",
         },
         {
-          name: "M.Tech in Renewable & Sustainable Energy",
+          name: "M.Tech in Production Engineering",
           level: "M.Tech",
           notes: "Focus on green hydrogen, solar thermal, and carbon capture.",
         },
@@ -372,6 +376,7 @@ export const admissions: Record<string, CourseGroup[]> = {
           notes:
             "Autonomous, industry-linked programs often offering higher practical exposure.",
         },
+
         {
           name: "MBA in Supply Chain & Logistics",
           level: "PG",
@@ -381,6 +386,11 @@ export const admissions: Record<string, CourseGroup[]> = {
           name: "MBA in Digital Business / E-Commerce",
           level: "PG",
           notes: "Prepares leaders for the platform-based digital economy.",
+        },
+        {
+          name: "PGDCA (Post graduate Diploma in Computer application",
+          level: "PG",
+          notes: "Traditional high-demand pillars for corporate management.",
         },
       ],
     },

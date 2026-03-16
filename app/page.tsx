@@ -42,7 +42,7 @@ function ExpertiseCard({
   courses: string[];
 }) {
   return (
-    <div className="group shadow-sm flex gap-4 relative rounded-3xl border border-slate-100 bg-white p-6 transition-all hover:border-[#108A58]/20 hover:shadow-xl hover:shadow-[#108A58]/5">
+    <div className="group shadow-sm flex sm:flex-col  gap-4 relative rounded-3xl border border-slate-100 bg-white p-6 transition-all hover:border-[#108A58]/20 hover:shadow-xl hover:shadow-[#108A58]/5">
       <IconBox>{icon}</IconBox>
       <div>
         <h3 className=" text-xl font-bold text-slate-900">{title}</h3>

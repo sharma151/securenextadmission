@@ -1,5 +1,4 @@
 "use client";
-"use client";
 import Image from "next/image";
 import { Menu, ChevronRight } from "lucide-react";
 import { usePathname } from "next/navigation";
@@ -29,7 +28,7 @@ export function Header() {
             className="relative h-15 w-15"
           />
           <div className="flex flex-col leading-tight">
-            <span className="text-sm font-semibold uppercase tracking-wide">
+            <span className=" text-sm sm:text-lg font-bold uppercase tracking-wide">
               Secure Next Admission
             </span>
             <span className="text-xs text-muted-foreground">
@@ -65,12 +64,15 @@ export function Header() {
         <div className="flex items-center gap-3">
           <div className="md:hidden ">
             <Sheet>
-              <SheetTrigger
-                aria-label="Open navigation"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border bg-card text-foreground"
-              >
-                <Menu className="h-4 w-4" />
+              <SheetTrigger asChild>
+                <button
+                  aria-label="Open navigation"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border"
+                >
+                  <Menu className="h-4 w-4" />
+                </button>
               </SheetTrigger>
+
               <SheetContent side="right" className="px-3">
                 <SheetHeader>
                   <SheetTitle>Menu</SheetTitle>
