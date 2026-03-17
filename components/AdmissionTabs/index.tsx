@@ -54,7 +54,7 @@ export default function AdmissionTab() {
       inline-flex  w-full max-w-full items-center gap-1
       rounded-full border border-slate-200 bg-slate-50
       p-1 pl-40 sm:pl-1
-      overflow-x-auto whitespace-nowrap scrollbar-hide
+      overflow-x-auto whitespace-nowrap no-scrollbar
       md:w-auto
       overflow-y-hidden
     "

@@ -9,6 +9,9 @@
 @source "../config/**/*.{ts,tsx}";
 @source "../constants/**/*.{ts,tsx}";
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 :root {
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -287,5 +290,42 @@ h3 {
   }
   html {
     @apply font-sans;
+  }
+
+  html {
+    /* Hide for Firefox & IE/Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  /* 2. Hide for Chrome/Safari (Mobile & Desktop default) */
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* 3. Enable Custom Emerald Scrollbar for Desktop Only (768px+) */
+  @media (min-width: 768px) {
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: #059669 transparent; /* Emerald-600 */
+    }
+
+    html::-webkit-scrollbar {
+      display: block;
+      width: 8px;
+    }
+
+    html::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    html::-webkit-scrollbar-thumb {
+      background-color: #059669; /* Emerald-600 */
+      border-radius: 20px;
+    }
+
+    html::-webkit-scrollbar-thumb:hover {
+      background-color: #047857; /* Emerald-700 */
+    }
   }
 }
