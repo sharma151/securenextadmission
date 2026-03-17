@@ -169,19 +169,19 @@ export default function HomePage() {
             <ExpertiseCard
               icon={<GraduationCap />}
               title="Engineering"
-              description="From JEE counseling to direct admission in top Bhopal institutes like LNCT, Oriental, and TIT."
+              description="Get guaranteed seats in premier engineering colleges. We specialize in hassle-free direct admissions and management quota processing for top technical institutes."
               courses={["B.Tech", "M.Tech", "Lateral Entry"]}
             />
             <ExpertiseCard
               icon={<Stethoscope />}
               title="Medical"
-              description="Strategic NEET counseling for MBBS, BDS and B.Pharma in India and abroad with full document support."
+              description="Secure your future in medicine through direct admission pathways. Expert guidance for private medical colleges and healthcare institutes across India."
               courses={["MBBS", "BDS", "B.Pharma"]}
             />
             <ExpertiseCard
               icon={<Building2 />}
               title="Management"
-              description="Get into top-tier B-Schools. We help with profile building for MBA and BBA admissions."
+              description="Fast-track your corporate career. We facilitate direct entry into top B-schools and management programs for aspiring leaders and professionals."
               courses={["MBA", "BBA", "PGDM"]}
             />
           </div>
