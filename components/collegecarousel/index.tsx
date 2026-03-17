@@ -16,6 +16,7 @@ import Lnct from "@/public/LNCT_cover.webp";
 import Sage from "@/public/sage-bhopal.webp";
 import ScopeGlobal from "@/public/scopeglobal.webp";
 import Vaishnavi from "@/public/vaishnavigroup.webp";
+import Bits from "@/public/bits_bhopal.webp";
 import RNTU from "@/public/RNTU.webp";
 import RGPM from "@/public/RGPM.webp";
 import Shriram from "@/public/shriramcollege.webp";
@@ -37,7 +38,8 @@ const collegesData = [
       "Management",
       "Computer Applications",
     ],
-    whatsappLink: "https://wa.me/919109250739?text=Enquiry%20for%20Oriental Group of Institute",
+    whatsappLink:
+      "https://wa.me/919109250739?text=Enquiry%20for%20Oriental Group of Institute",
   },
   {
     id: 2,
@@ -55,7 +57,8 @@ const collegesData = [
       "Ayurveda",
       "Law",
     ],
-    whatsappLink: "https://wa.me/919109250739?text=Enquiry%20for%20LNCT Group of Institutes",
+    whatsappLink:
+      "https://wa.me/919109250739?text=Enquiry%20for%20LNCT Group of Institutes",
   },
   {
     id: 3,
@@ -72,7 +75,8 @@ const collegesData = [
       "Management",
       "Performing Arts",
     ],
-    whatsappLink: "https://wa.me/919109250739?text=Enquiry%20for%20SAGE University",
+    whatsappLink:
+      "https://wa.me/919109250739?text=Enquiry%20for%20SAGE University",
   },
   {
     id: 4,
@@ -88,7 +92,8 @@ const collegesData = [
       "Digital Marketing",
       "Management",
     ],
-    whatsappLink: "https://wa.me/919109250739?text=Enquiry%20for%20Scope Global Skills University",
+    whatsappLink:
+      "https://wa.me/919109250739?text=Enquiry%20for%20Scope Global Skills University",
   },
   {
     id: 5,
@@ -99,14 +104,15 @@ const collegesData = [
     description:
       "Focuses on creating industry-ready professionals through tech-enabled classrooms and a robust training and placement cell targeting top IT firms.",
     offerings: ["Engineering", "Management", "AI & Machine Learning"],
-    whatsappLink: "https://wa.me/919109250739?text=Enquiry%20for%20Vaishnavi Group of Institutions",
+    whatsappLink:
+      "https://wa.me/919109250739?text=Enquiry%20for%20Vaishnavi Group of Institutions",
   },
   {
     id: 6,
     name: "Bhopal Institute of Technology & Science (BITS)",
     location: "Bhopal, MP",
     address: "BITS Campus, Bhojpur Road, Bangrasia, Bhopal, MP 462045",
-    image: Vaishnavi,
+    image: Bits,
     description:
       "Established in 2002, BITS provides a student-friendly environment with a strong emphasis on core engineering branches and practical laboratory exposure.",
     offerings: ["Engineering", "Management", "Post-Graduate Technical Studies"],
@@ -121,7 +127,8 @@ const collegesData = [
     description:
       "Recognized as India's first skills-based private university, RNTU offers a diverse cultural ecosystem with students from over 28 states and various countries.",
     offerings: ["Engineering", "Law", "Pharmacy", "Education", "Paramedical"],
-    whatsappLink: "https://wa.me/919109250739?text=Enquiry%20for%20Rabindranath Tagore University",
+    whatsappLink:
+      "https://wa.me/919109250739?text=Enquiry%20for%20Rabindranath Tagore University",
   },
   {
     id: 8,
@@ -206,7 +213,7 @@ export default function CollegesCarousel() {
                       <Image
                         src={college.image}
                         alt={college.name}
-                        fill // This makes the image fill the parent div
+                        fill
                         className="object-cover transition-transform group-hover:scale-105 duration-500"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
