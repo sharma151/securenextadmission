@@ -15,7 +15,8 @@ import {
 import CollegesCarousel from "@/components/collegecarousel";
 
 export const metadata: Metadata = {
-  title: "Bhopal Admission Consultancy | Expert Engineering & Medical Guidance",
+  title:
+    "Secure Next Admission | Bhopal Admission Consultancy | Expert Engineering & Medical Guidance",
   description:
     "Get expert-led admission guidance for B.Tech, MBBS, and MBA in Bhopal. Personalized counseling from industry professionals.",
 };

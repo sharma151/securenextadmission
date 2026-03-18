@@ -3,7 +3,7 @@ import "./globals.css";
 import { Header } from "@/components/navigation/Header";
 import { WhatsAppFab } from "@/components/ui/WhatsAppFab";
 import { navLinks } from "@/config/navigation";
-import { Inter, Poppins, Geist } from "next/font/google";
+import { Poppins, Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
