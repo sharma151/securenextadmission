@@ -3,7 +3,7 @@ import "./globals.css";
 import { Header } from "@/components/navigation/Header";
 import { WhatsAppFab } from "@/components/ui/WhatsAppFab";
 import { navLinks } from "@/config/navigation";
-import { Inter, Poppins, Geist } from "next/font/google";
+import { Poppins, Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Secure Next Admission | Best Education Consultancy in Bhopal",
     description:
-      "Expert guidance for engineering, medical, and management admissions across India.",
+      "Expert guidance for Engineering, Medical, and Management admissions in Bhopal and across India. Secure your seat in top colleges with Secure Next Admission..",
     url: "https://securenextadmission.com",
     siteName: "Secure Next Admission",
     locale: "en_IN",
@@ -104,8 +104,10 @@ export default function RootLayout({
           </footer>
           <WhatsAppFab />
         </div>
-        <Analytics />
-        <SpeedInsights />
+        <div data-nosnippet>
+          <Analytics />
+          <SpeedInsights />
+        </div>
       </body>
     </html>
   );
