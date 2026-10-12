@@ -39,7 +39,7 @@ const collegesData = [
       "Computer Applications",
     ],
     whatsappLink:
-      "https://wa.me/919109250739?text=Enquiry%20for%20Oriental Group of Institute",
+      "https://wa.me/919015906005?text=Enquiry%20for%20Oriental Group of Institute",
   },
   {
     id: 2,
@@ -58,7 +58,7 @@ const collegesData = [
       "Law",
     ],
     whatsappLink:
-      "https://wa.me/919109250739?text=Enquiry%20for%20LNCT Group of Institutes",
+      "https://wa.me/919015906005?text=Enquiry%20for%20LNCT Group of Institutes",
   },
   {
     id: 3,
@@ -76,7 +76,7 @@ const collegesData = [
       "Performing Arts",
     ],
     whatsappLink:
-      "https://wa.me/919109250739?text=Enquiry%20for%20SAGE University",
+      "https://wa.me/919015906005?text=Enquiry%20for%20SAGE University",
   },
   {
     id: 4,
@@ -93,7 +93,7 @@ const collegesData = [
       "Management",
     ],
     whatsappLink:
-      "https://wa.me/919109250739?text=Enquiry%20for%20Scope Global Skills University",
+      "https://wa.me/919015906005?text=Enquiry%20for%20Scope Global Skills University",
   },
   {
     id: 5,
@@ -105,7 +105,7 @@ const collegesData = [
       "Focuses on creating industry-ready professionals through tech-enabled classrooms and a robust training and placement cell targeting top IT firms.",
     offerings: ["Engineering", "Management", "AI & Machine Learning"],
     whatsappLink:
-      "https://wa.me/919109250739?text=Enquiry%20for%20Vaishnavi Group of Institutions",
+      "https://wa.me/919015906005?text=Enquiry%20for%20Vaishnavi Group of Institutions",
   },
   {
     id: 6,
@@ -116,7 +116,7 @@ const collegesData = [
     description:
       "Established in 2002, BITS provides a student-friendly environment with a strong emphasis on core engineering branches and practical laboratory exposure.",
     offerings: ["Engineering", "Management", "Post-Graduate Technical Studies"],
-    whatsappLink: "https://wa.me/919109250739?text=Enquiry%20for%20BITS",
+    whatsappLink: "https://wa.me/919015906005?text=Enquiry%20for%20BITS",
   },
   {
     id: 7,
@@ -128,7 +128,7 @@ const collegesData = [
       "Recognized as India's first skills-based private university, RNTU offers a diverse cultural ecosystem with students from over 28 states and various countries.",
     offerings: ["Engineering", "Law", "Pharmacy", "Education", "Paramedical"],
     whatsappLink:
-      "https://wa.me/919109250739?text=Enquiry%20for%20Rabindranath Tagore University",
+      "https://wa.me/919015906005?text=Enquiry%20for%20Rabindranath Tagore University",
   },
   {
     id: 8,
@@ -140,7 +140,7 @@ const collegesData = [
       "Affiliated with RGPV, this institution is dedicated to providing affordable, high-quality technical education with a focus on holistic student development.",
     offerings: ["Engineering", "Polytechnic Diploma", "Management"],
     whatsappLink:
-      "https://wa.me/919109250739?text=Enquiry%20for%20Rajiv Gandhi Proudyogiki Mahavidhyalaya",
+      "https://wa.me/919015906005?text=Enquiry%20for%20Rajiv Gandhi Proudyogiki Mahavidhyalaya",
   },
   {
     id: 9,
@@ -152,7 +152,7 @@ const collegesData = [
       "Part of the prestigious Shri Ram Group, SRCT is known for its discipline, academic excellence, and consistent placement track record in core industries.",
     offerings: ["Engineering", "Computer Engineering", "Mechanical", "Civil"],
     whatsappLink:
-      "https://wa.me/919109250739?text=Enquiry%20for%20Shri Ram College Of Technology (SRCT)",
+      "https://wa.me/919015906005?text=Enquiry%20for%20Shri Ram College Of Technology (SRCT)",
   },
   {
     id: 10,
@@ -169,7 +169,7 @@ const collegesData = [
       "Physiotherapy",
       "Management",
     ],
-    whatsappLink: "https://wa.me/919109250739?text=Enquiry%20for%20KNP",
+    whatsappLink: "https://wa.me/919015906005?text=Enquiry%20for%20KNP",
   },
 ];
 export default function CollegesCarousel() {

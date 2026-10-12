@@ -247,10 +247,10 @@ export default function HomePage() {
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="tel:+919109250739"
+              href="tel:+91 9015906005"
               className="flex items-center gap-2 text-xl font-bold text-[#108A58]"
             >
-              <PhoneCall /> +91 9109250739
+              <PhoneCall /> +91 9015906005
             </a>
           </div>
         </div>
