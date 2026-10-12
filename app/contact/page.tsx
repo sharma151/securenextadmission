@@ -68,7 +68,7 @@ export default function ContactPage() {
             {[
               {
                 label: "Phone",
-                value: "+91- 9109250739,  9343003774, 9691598475",
+                value: "+91- 9015906005",
                 sub: "Mon - Sat, 10am to 7pm",
                 icon: Phone,
                 color: "text-emerald-600",

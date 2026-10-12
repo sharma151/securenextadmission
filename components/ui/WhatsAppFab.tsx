@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import WhatsappIcon from "@/public/whatsapp-svgrepo-com (1).svg";
-const WHATSAPP_LINK = "https://wa.me/+919109250739";
+const WHATSAPP_LINK = "https://wa.me/+919015906005";
 
 export function WhatsAppFab() {
   return (
